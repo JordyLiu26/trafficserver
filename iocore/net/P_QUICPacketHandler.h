@@ -66,7 +66,7 @@ public:
 private:
   void _recv_packet(int event, UDPPacket *udp_packet) override;
 
-  QUICConnectionTable _ctable;
+  QUICConnectionTable *_ctable = nullptr;
   SSL_CTX *_ssl_ctx;
 };
 
